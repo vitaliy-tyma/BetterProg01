@@ -38,7 +38,7 @@ public class Test101 {
         Please implement this method to
         reverse a given linked list.
        */
-		//ListNode node = 
+		//ListNode node = ;;
 		//ReverseListInterface.reverse(node);
 		
 		
