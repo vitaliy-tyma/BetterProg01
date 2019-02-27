@@ -30,7 +30,7 @@ public class ReverseListInterface {
 		return prev;
 
 //		 ListNode prev = null;
-//		 ListNode possibleRoot = null;
+//		 ListNode possibleRoot? = null;
 //       ListNode curr = node;
 //		 ListNode next = curr.getNext();
 // 		 while (curr != null) {
