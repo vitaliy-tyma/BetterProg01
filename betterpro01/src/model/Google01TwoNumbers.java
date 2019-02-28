@@ -19,7 +19,7 @@ public class Google01TwoNumbers {
 	 * Bonus: Can you do this in one pass?
 	 */
 
-	public static List<Integer> findNumbers01(List<Integer> list, int sum_to_find) {
+	public static List<Integer> findNumbers01(List<Integer> list, int sumToFind) {
 		List<Integer> result = new ArrayList<Integer>();
 		List<Integer> reminder = new ArrayList<Integer>();
 
@@ -28,7 +28,7 @@ public class Google01TwoNumbers {
 		
 		outerloop:
 		for (Integer element : list) {
-			reminder.add(sum_to_find - element);
+			reminder.add(sumToFind - element);
 
 			k = 0;
 			for (Integer element2 : reminder) {
@@ -46,13 +46,13 @@ public class Google01TwoNumbers {
 	}
 
 	
-	public static int[] findNumbers02(List<Integer> list, int sum_to_find) {
+	public static int[] findNumbers02(List<Integer> list, int sumToFind) {
 		int[] result = new int[2];
 		List<Integer> reminder = new LinkedList<Integer>();
 
 		int j = 0;
 		for (Integer element : list) {
-			reminder.add(sum_to_find - element);
+			reminder.add(sumToFind - element);
 
 			if (reminder.contains(element)) {
 				result[0] = reminder.indexOf(element)+1;

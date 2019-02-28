@@ -59,9 +59,9 @@ public class Test101 {
 		 * Bonus: Can you do this in one pass?
 		 */
 		List<Integer> list = Arrays.asList(10, 15, 3, 6, 8, 10, 45, 7, 4);
-		int sum_to_find = 17;
+		int sumToFind = 17;
 		System.out.println("Source array  = " + list);
-		System.out.println("To get [" + sum_to_find + "] you need these elements (solution 01): " + Google01TwoNumbers.findNumbers01(list, sum_to_find));
-		System.out.println("To get [" + sum_to_find + "] you need these elements (solution 02): " + Arrays.toString(Google01TwoNumbers.findNumbers02(list, sum_to_find)));
+		System.out.println("To get [" + sumToFind + "] you need these elements (solution 01): " + Google01TwoNumbers.findNumbers01(list, sum_to_find));
+		System.out.println("To get [" + sumToFind + "] you need these elements (solution 02): " + Arrays.toString(Google01TwoNumbers.findNumbers02(list, sum_to_find)));
 	}
 }
