@@ -9,10 +9,12 @@ import model.GetPrimeNumbers;
 import model.Google01TwoNumbers;
 import model.ReverseArray;
 import model.ReverseListInterface;
+import model.Uber;
 
 public class Test101 {
 
 	public static void main(String[] args) {
+		System.out.println("Select task!");
 		/*
 		 * 01 Please implement this method to return a new array where the order of
 		 * elements has been reversed from the original array.
@@ -20,7 +22,6 @@ public class Test101 {
 //		  Object[] a = new Object[] {1,2,3,5,6,7,8,9,10,4};
 //		  System.out.println(Arrays.toString(a));
 //		  System.out.println(Arrays.toString(ReverseArray.reverseArray(a)));
-		 
 
 		/*
 		 * 02 Please implement this method to return a list of all prime numbers in the
@@ -58,10 +59,28 @@ public class Test101 {
 		 * 
 		 * Bonus: Can you do this in one pass?
 		 */
-		List<Integer> list = Arrays.asList(10, 15, 3, 6, 8, 10, 45, 7, 4);
-		int sumToFind = 17;
-		System.out.println("Source array  = " + list);
-		System.out.println("To get [" + sumToFind + "] you need these elements (solution 01): " + Google01TwoNumbers.findNumbers01(list, sum_to_find));
-		System.out.println("To get [" + sumToFind + "] you need these elements (solution 02): " + Arrays.toString(Google01TwoNumbers.findNumbers02(list, sum_to_find)));
+//		List<Integer> list = Arrays.asList(10, 15, 3, 6, 8, 10, 45, 7, 4);
+//		int sumToFind = 17;
+//		System.out.println("Source array  = " + list);
+//		System.out.println("To get [" + sumToFind + "] you need these elements (solution 01): "
+//				+ Google01TwoNumbers.findNumbers01(list, sumToFind));
+//		System.out.println("To get [" + sumToFind + "] you need these elements (solution 02): "
+//				+ Arrays.toString(Google01TwoNumbers.findNumbers02(list, sumToFind)));
+
+		/*
+		 * Uber 01.
+		 * 
+		 * Given an array of integers, return a new array such that each element at
+		 * index i of the new array is the product of all the numbers in the original
+		 * array except the one at i. For example, if our input was [1, 2, 3, 4, 5], the
+		 * expected output would be [120, 60, 40, 30, 24]. If our input was [3, 2, 1],
+		 * the expected output would be [2, 3, 6]. Follow-up: what if you can't use
+		 * division?
+		 */
+		int[] a = {1, 2, 3, 4, 5};
+		System.out.println("Source array is " + Arrays.toString(a));
+		System.out.println("Result array is " + Arrays.toString(Uber.method01(a)));
+		
+
 	}
 }
