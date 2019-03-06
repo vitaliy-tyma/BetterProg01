@@ -5,16 +5,18 @@ import java.util.Arrays;
 import java.util.List;
 
 import model.CountWaysToJump;
+import model.EISgroup;
 import model.GetPrimeNumbers;
 import model.Google01TwoNumbers;
 import model.ReverseArray;
 import model.ReverseListInterface;
+import model.Stripe;
 import model.Uber;
 
 public class Test101 {
 
 	public static void main(String[] args) {
-		System.out.println("Select task!");
+		System.out.println("Select task!\n");
 		/*
 		 * 01 Please implement this method to return a new array where the order of
 		 * elements has been reversed from the original array.
@@ -77,10 +79,41 @@ public class Test101 {
 		 * the expected output would be [2, 3, 6]. Follow-up: what if you can't use
 		 * division?
 		 */
-		int[] a = {1, 2, 3, 4, 5};
-		System.out.println("Source array is " + Arrays.toString(a));
-		System.out.println("Result array is " + Arrays.toString(Uber.method01(a)));
+//		int[] a = {1, 2, 3, 4, 5};
+//		System.out.println("Source array is " + Arrays.toString(a));
+//		System.out.println("Result array is " + Arrays.toString(Uber.method01(a)));
 		
+		/**
+		 * EIS Group
+		 * Test task 01
+		 * Increment without +
+		 * 
+		 * */
+//		int a1 = 2;
+//		int b1 = 4; 
+//		System.out.println("EIS test task 01 - increment (" + a1 + " + " + b1 + ") = " + EISgroup.method01(a1,b1));
+		
+//		/** Method 02 */
+//		EISgroup.method02();
+	
+		/**
+		 * Stripe
+		 * Task 01
+		 * */
+		int[] stripeArray = {3, 4, -1, 1, 2, 5, 7, -5, 9, 8, 545, 10, 12, 6};
+		System.out.println("*********************************");
+		System.out.println("Source array is " + Arrays.toString(stripeArray));
+		System.out.println("Stripe 01 - lowest positive integer is : " + Stripe.method01(stripeArray) + "\n"); 
+
+		int[] stripeArray1 = {1, 2, 0};
+		System.out.println("*********************************");
+		System.out.println("Source array is " + Arrays.toString(stripeArray1));
+		System.out.println("Stripe 01 - lowest positive integer is : " + Stripe.method01(stripeArray1) + "\n"); 
+		
+		int[] stripeArray2 = {1, 0, 3, 4, 1, 3};
+		System.out.println("*********************************");
+		System.out.println("Source array is " + Arrays.toString(stripeArray2));
+		System.out.println("Stripe 01 - lowest positive integer is : " + Stripe.method01(stripeArray2) + "\n"); 
 
 	}
 }
