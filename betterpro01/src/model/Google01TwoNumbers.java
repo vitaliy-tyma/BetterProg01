@@ -7,7 +7,7 @@ import java.util.List;
 
 
 public class Google01TwoNumbers {
-	/*
+	/**
 	 * Google 01
 	 * 
 	 * Given a list of numbers and a number k, return whether any two numbers from

@@ -3,6 +3,7 @@ package betterpro01;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 import model.CountWaysToJump;
 import model.EISgroup;
@@ -82,38 +83,56 @@ public class Test101 {
 //		int[] a = {1, 2, 3, 4, 5};
 //		System.out.println("Source array is " + Arrays.toString(a));
 //		System.out.println("Result array is " + Arrays.toString(Uber.method01(a)));
-		
+
 		/**
-		 * EIS Group
-		 * Test task 01
-		 * Increment without +
+		 * EIS Group Test task 01 Increment without +
 		 * 
-		 * */
+		 */
 //		int a1 = 2;
 //		int b1 = 4; 
 //		System.out.println("EIS test task 01 - increment (" + a1 + " + " + b1 + ") = " + EISgroup.method01(a1,b1));
-		
+
 //		/** Method 02 */
 //		EISgroup.method02();
-	
-		/**
-		 * Stripe
-		 * Task 01
-		 * */
-		int[] stripeArray = {3, 4, -1, 1, 2, 5, 7, -5, 9, 8, 545, 10, 12, 6};
-		System.out.println("*********************************");
-		System.out.println("Source array is " + Arrays.toString(stripeArray));
-		System.out.println("Stripe 01 - lowest positive integer is : " + Stripe.method01(stripeArray) + "\n"); 
 
-		int[] stripeArray1 = {1, 2, 0};
-		System.out.println("*********************************");
-		System.out.println("Source array is " + Arrays.toString(stripeArray1));
-		System.out.println("Stripe 01 - lowest positive integer is : " + Stripe.method01(stripeArray1) + "\n"); 
-		
-		int[] stripeArray2 = {1, 0, 3, 4, 1, 3};
-		System.out.println("*********************************");
-		System.out.println("Source array is " + Arrays.toString(stripeArray2));
-		System.out.println("Stripe 01 - lowest positive integer is : " + Stripe.method01(stripeArray2) + "\n"); 
+		/**
+		 * Stripe Task 01 Array must not be empty! // if (stripeArray.length == 0) { //
+		 * return " array is empty."; // }
+		 */
+		// test
+		System.out.println("***TEST STRIPE******************************");
+
+		int len1 = 100000000;
+		int[] a = new int[len1];
+		int i1 = 0;
+		Random random = new Random(len1);
+		for (i1 = 0; i1 < len1 - 1; i1++) {
+			a[i1] = random.nextInt(1000000);
+		}
+		a[i1] = a[i1] + len1 + 2;
+
+		System.out.println("***TEST len1******************************");
+		//System.out.println("Source array is " + Arrays.toString(a));
+		System.out.println("Stripe a 01.1 - lowest positive integer is : " + Stripe.methodMissingInteger01(a) + "\n");
+		System.out.println("Stripe a 01.2 - lowest positive integer is : " + Stripe.methodMissingInteger02(a) + "\n");
+
+//		int[] stripeArray = {3, 4, -1, 1, 2, 5, 7, -5, 9, 8, 545, 10, 14, 6};
+//		System.out.println("***TEST 1******************************");
+//		System.out.println("Source array is " + Arrays.toString(stripeArray));
+//		System.out.println("Stripe 01.1 - lowest positive integer is : " + Stripe.methodMissingInteger01(stripeArray) + "\n"); 
+//		System.out.println("Stripe 01.2 - lowest positive integer is : " + Stripe.methodMissingInteger02(stripeArray) + "\n"); 
+//
+//		int[] stripeArray1 = {1, 2, 0};
+//		System.out.println("***TEST 2******************************");
+//		System.out.println("Source array is " + Arrays.toString(stripeArray1));
+//		System.out.println("Stripe 01.1 - lowest positive integer is : " + Stripe.methodMissingInteger01(stripeArray1) + "\n"); 
+//		System.out.println("Stripe 01.2 - lowest positive integer is : " + Stripe.methodMissingInteger02(stripeArray1) + "\n"); 
+//		
+//		int[] stripeArray2 = {1, 0, 3, 4, 1, 3};
+//		System.out.println("***TEST 3******************************");
+//		System.out.println("Source array is " + Arrays.toString(stripeArray2));
+//		System.out.println("Stripe 01.1 - lowest positive integer is : " + Stripe.methodMissingInteger01(stripeArray2) + "\n"); 
+//		System.out.println("Stripe 01.2 - lowest positive integer is : " + Stripe.methodMissingInteger02(stripeArray2) + "\n"); 
 
 	}
 }

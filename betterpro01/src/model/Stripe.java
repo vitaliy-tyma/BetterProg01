@@ -1,6 +1,9 @@
 package model;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 public class Stripe {
 	/**
@@ -16,33 +19,88 @@ public class Stripe {
 	 * 
 	 * You can modify the input array in-place.
 	 */
-	public static String method01(int[] stripeArray) {
-
-		if (stripeArray.length == 0) {
-			return " array is empty.";
-		}
+	public static int methodMissingInteger01(int[] stripeArray) {
+		long startTime = System.nanoTime();
+		long startTimeMs = System.currentTimeMillis();
 
 		Arrays.sort(stripeArray);
-
+		//System.out.println(Arrays.toString(stripeArray));
+		
 		int i = 0;
-		for (i = 0; i < stripeArray.length; i++) {
-			
+		int len = stripeArray.length;
+		int resInt = 1;
+		
+		for (i = 0; i < len; i++) {
+
 			/** Pass all negative values and 0. resInt++ */
 			if (stripeArray[i] <= 0) {
+				//System.out.println("*** Pass negative and zero *** i = "+ i);
 				continue;
 			}
+			
+			if (stripeArray[0] > 1) {
+				break;
+			}
 
-
-			if ((i + 1) < stripeArray.length) {
+			if ((i + 1) < len) {
 				/** Inside of array - check if a[i]+1 <> a[i+1] - gap found - exit */
-				if (stripeArray[i] + 1 != stripeArray[i + 1]) {
+				if ((stripeArray[i] + 1 != stripeArray[i + 1]) && (stripeArray[i] != stripeArray[i+1])) {
+					resInt = stripeArray[i] + 1;
+					//System.out.println("i = " + i + " . stripeArray[i] + 1 = (" + (stripeArray[i] + 1) + ") != (" + stripeArray[i + 1] + ") = stripeArray[i + 1].");
 					break;
 				}
 			} else {
 				/** End of array has been reached - result = a[i]+1 - exit */
 				break;
 			}
+
 		}
-		return Integer.toString(stripeArray[i] + 1);
+		long elapsedTime = System.nanoTime() - startTime;
+		long elapsedTimeMs = System.currentTimeMillis() - startTimeMs;
+
+		System.out.println("Elapsed (ns) " + elapsedTime / 1000 + " ms.");
+		System.out.println("Elapsed (ms) " + elapsedTimeMs + " ms.");
+		
+		return resInt;
 	}
+
+	
+	
+	
+	public static int methodMissingInteger02(int[] stripeArray) {
+		long startTime = System.nanoTime();
+		long startTimeMs = System.currentTimeMillis();
+		
+		Arrays.sort(stripeArray);
+
+		int i = 0;
+		int resInt = 1;
+		
+		for (i = 0; i < stripeArray.length; i++) {
+
+			/** Pass all negative values and 0. resInt++ */
+			if (stripeArray[i] <= 1) {
+				//System.out.println("*** Pass negative and zero *** i = "+ i);
+				continue;
+			}
+			if (stripeArray[0] > 1) {
+				break;
+			}
+			
+			/** Check previous element */
+			if ((stripeArray[i] - 1 != stripeArray[i - 1]) && (stripeArray[i] != stripeArray[i-1])) {
+				resInt = stripeArray[i - 1] + 1;
+				//System.out.println("i = " + i + " . stripeArray[i] + 1 = (" + (stripeArray[i] + 1) + ") != (" + stripeArray[i + 1] + ") = stripeArray[i + 1].");
+				break;
+			}
+		}
+		long elapsedTime = System.nanoTime() - startTime;
+		long elapsedTimeMs = System.currentTimeMillis() - startTimeMs;
+
+		System.out.println("Elapsed (ns) " + elapsedTime / 1000 + " ms.");
+		System.out.println("Elapsed (ms) " + elapsedTimeMs + " ms.");
+
+		return resInt;
+	}
+
 }
