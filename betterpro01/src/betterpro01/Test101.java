@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+import model.Airbnb;
 import model.CountWaysToJump;
 import model.EISgroup;
 import model.GetPrimeNumbers;
@@ -100,21 +101,21 @@ public class Test101 {
 		 * return " array is empty."; // }
 		 */
 		// test
-		System.out.println("***TEST STRIPE******************************");
-
-		int len1 = 100000000;
-		int[] a = new int[len1];
-		int i1 = 0;
-		Random random = new Random(len1);
-		for (i1 = 0; i1 < len1 - 1; i1++) {
-			a[i1] = random.nextInt(1000000);
-		}
-		a[i1] = a[i1] + len1 + 2;
-
-		System.out.println("***TEST len1******************************");
-		//System.out.println("Source array is " + Arrays.toString(a));
-		System.out.println("Stripe a 01.1 - lowest positive integer is : " + Stripe.methodMissingInteger01(a) + "\n");
-		System.out.println("Stripe a 01.2 - lowest positive integer is : " + Stripe.methodMissingInteger02(a) + "\n");
+//		System.out.println("***TEST STRIPE******************************");
+//
+//		int len1 = 100000000;
+//		int[] a = new int[len1];
+//		int i1 = 0;
+//		Random random = new Random(len1);
+//		for (i1 = 0; i1 < len1 - 1; i1++) {
+//			a[i1] = random.nextInt(1000000);
+//		}
+//		a[i1] = a[i1] + len1 + 2;
+//
+//		System.out.println("***TEST len1******************************");
+//		//System.out.println("Source array is " + Arrays.toString(a));
+//		System.out.println("Stripe a 01.1 - lowest positive integer is : " + Stripe.methodMissingInteger01(a) + "\n");
+//		System.out.println("Stripe a 01.2 - lowest positive integer is : " + Stripe.methodMissingInteger02(a) + "\n");
 
 //		int[] stripeArray = {3, 4, -1, 1, 2, 5, 7, -5, 9, 8, 545, 10, 14, 6};
 //		System.out.println("***TEST 1******************************");
@@ -134,5 +135,17 @@ public class Test101 {
 //		System.out.println("Stripe 01.1 - lowest positive integer is : " + Stripe.methodMissingInteger01(stripeArray2) + "\n"); 
 //		System.out.println("Stripe 01.2 - lowest positive integer is : " + Stripe.methodMissingInteger02(stripeArray2) + "\n"); 
 
+		
+		/**
+		 * Airbnb 01
+		 * [2, 4, 6, 2, 5] = 2+6+5 = 13
+		 * [5, 1, 1, 5] = 5+5 = 10
+		 * */
+		System.out.println("***TEST AirBnB******************************");
+		
+		int[] a1 = {2, 4, 6, 2, 5};
+		System.out.println("***TEST 1******************************");
+		System.out.println("** Source array is " + Arrays.toString(a1));
+		System.out.println("** Airbnb 01.1 - Sum = " + Airbnb.methodSum01(a1));
 	}
 }
